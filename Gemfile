@@ -62,4 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #css framework based on flexbot
 gem "bulma-rails", "~> 0.7.4"
-
+gem 'simple_form'
+gem 'devise'

@@ -70,6 +70,15 @@
         </div>
       </div>
     </nav>
+
+    <% if notice.present? %>
+      <p class="notification is-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="notification is-danger"><%= alert %></p>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
