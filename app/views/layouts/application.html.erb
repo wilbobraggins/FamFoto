@@ -53,10 +53,16 @@
             </div>
           </div>
         </div>
+      <% if user_signed_in? %>
+        <button class="button is-danger"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+      <% else %>  
+        <button class="button is-primary" id="myBtn">Sign Up</button>
 
         <button class="button is-primary" id="myBtn">Open Modal</button>
 
         <%= render "devise/registrations/new" %>
+      <% end %>  
+
                 
               
     </nav>
