@@ -56,46 +56,9 @@
 
         <button class="button is-primary" id="myBtn">Open Modal</button>
 
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-          <div class="modal-background"></div>
-            <div class="modal-card">
-              <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
-                <button class="delete close" aria-label="close"></button>
-              </header>
-              <section class="modal-card-body">
-                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                <%= f.error_notification %>
-
-                <div class="form-inputs">
-                  <%= f.input :email,
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "email" }%>
-                  <%= f.input :password,
-                              required: true,
-                              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                              input_html: { autocomplete: "new-password" } %>
-                  <%= f.input :password_confirmation,
-                              required: true,
-                              input_html: { autocomplete: "new-password" } %>
-                </div>
-
-                <div class="form-actions">
-                  <%= f.button :submit, "Sign up" %>
-                </div>
-              <% end %>
-
-              <%= render "devise/shared/links" %>
-                <!-- Content ... -->
-              </section>
-              <footer class="modal-card-foot">
-                <button class="close button is-primary" class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
-              </footer>
-            </div>
-          </div>
+        <%= render "devise/registrations/new" %>
+                
+              
     </nav>
 
     <% if notice.present? %>
